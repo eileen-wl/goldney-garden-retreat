@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { GlassCard } from "@/components/GlassCard";
 import { Home, MapPin } from "lucide-react";
-import mapImage from "@/assets/garden-map.jpg";
+import mapImage from "@/assets/garden-map-clean.jpg";
 
 interface SceneMarker {
   id: string;
