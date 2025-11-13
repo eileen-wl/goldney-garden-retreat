@@ -3,17 +3,14 @@ import { Button } from "@/components/ui/button";
 import { GlassCard } from "@/components/GlassCard";
 import { Sparkles } from "lucide-react";
 import heroImage from "@/assets/goldney-garden-hero.jpg";
-
 const Home = () => {
   const navigate = useNavigate();
-
-  return (
-    <div className="relative min-h-screen w-full overflow-hidden">
+  return <div className="relative min-h-screen w-full overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})`, filter: "blur(3px)" }}
-      />
+      <div className="absolute inset-0 bg-cover bg-center" style={{
+      backgroundImage: `url(${heroImage})`,
+      filter: "blur(3px)"
+    }} />
       
       {/* Volumetric Light Overlay */}
       <div className="absolute inset-0 volumetric-light" />
@@ -40,7 +37,7 @@ const Home = () => {
             <Sparkles className="w-12 h-12 text-primary animate-pulse" />
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent leading-tight mx-[34px] px-0 my-0">
             A Digital Retreat
           </h1>
           
@@ -51,19 +48,12 @@ const Home = () => {
           </p>
 
           <div className="pt-4">
-            <Button 
-              variant="glass-primary" 
-              size="xl" 
-              onClick={() => navigate("/map")}
-              className="font-semibold"
-            >
+            <Button variant="glass-primary" size="xl" onClick={() => navigate("/map")} className="font-semibold">
               Begin Your Journey
             </Button>
           </div>
         </GlassCard>
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
